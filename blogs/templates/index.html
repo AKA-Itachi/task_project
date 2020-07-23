@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>Blogs Home</h1>
+<p>Welcome to Blogs</p>
+<h2>Dynamic content</h2>
+<p>The blogs has the following record counts:</p>
+<ul>
+  <li><strong>Blogs:</strong> {{ num_books }}</li>
+  <li><strong>Authors:</strong> {{ num_authors }}</li>
+  <li><strong>Comments:</strong> {{ num_comments }}</li>
+</ul>
+
+<p>You have visited this page {{ num_visits }}{% if num_visits == 1 %} time{% else %} times{% endif %}.</p>
+{% endblock %}
