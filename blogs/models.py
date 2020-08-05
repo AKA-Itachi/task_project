@@ -10,6 +10,7 @@ class blogs(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField(max_length=1000, help_text='Enter a brief description')
     photo = models.ImageField(upload_to='uploads/')
+    # slug = models.SlugField('',max_length=60)
 
     # Foreign Key used because blog can only have one author, but authors can have multiple blogs
     author = models.ForeignKey('Author', on_delete=models.SET_NULL, null=True)

@@ -14,7 +14,8 @@ class blogsAdmin(admin.ModelAdmin):
 # Register the Admin classes for BookInstance using the decorator
 @admin.register(Author) 
 class AuthorAdmin(admin.ModelAdmin):
-    list_display = ['date_of_birth']
+    list_display = ['name','date_of_birth']
+    list_filter = ['name']
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):

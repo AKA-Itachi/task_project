@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'blogs',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
@@ -134,7 +135,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # Redirect to home URL after login (Default redirects to /accounts/profile/)
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/blogs/blog/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
